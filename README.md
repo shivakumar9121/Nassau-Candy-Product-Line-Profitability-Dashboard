@@ -235,11 +235,6 @@ The project uses the **Nassau Candy Distributor Dataset** containing:
 - Streamlit Cloud Deployment
 - Advanced Business KPIs
 
----
-
-# 📄 License
-
-This project is licensed under the MIT License.
 
 ---
 
