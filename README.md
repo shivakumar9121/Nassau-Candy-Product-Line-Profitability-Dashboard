@@ -22,59 +22,48 @@ The application provides an interactive interface with dynamic filters, KPI card
 
 # 🚀 Dashboard Preview
 
-## Dashboard Home
-
-![Dashboard Home](screenshots/dashboard-home.png)
+## 🏠 Dashboard Home
+![Dashboard Home](images/Dashboard-Home.png)
 
 ---
 
 ## 📊 Revenue Analysis
-
-![Revenue Analysis](screenshots/revenue-analysis.png)
+![Revenue Analysis](images/revenue-analysis.png)
 
 ---
 
 ## 📈 Sales vs Profit Analysis
-
-![Sales vs Profit](screenshots/sales-profit-analysis.png)
+![Sales vs Profit](images/sales-profit-analysis.png)
 
 ---
 
 ## 📉 Pareto Analysis (80/20 Rule)
-
-![Pareto Analysis](screenshots/pareto-analysis.png)
+![Pareto Analysis](images/pareto-analysis.png)
 
 ---
 
 ## 🏆 Products Contributing to 80% Revenue
-
-![Revenue Contribution](screenshots/revenue-contribution.png)
+![Revenue Contribution](images/Revenue-contribution.png)
 
 ---
 
 ## ⚠️ Margin Risk Analysis
-
-![Margin Risk](screenshots/margin-risk-analysis.png)
-
----
-
-## 🥇 Top 10 Best Performing Products
-
-![Top Products](screenshots/top-products-table.png)
+![Margin Risk](images/margin-risk-analysis.png)
 
 ---
 
 ## 💡 Business Insights & Recommendations
+![Business Insights](images/business-insights.png)
 
-![Business Insights](screenshots/business-insights.png)
+---
+
+## 📌 Executive Summary
+![Executive Summary](images/executive-summary.png)
 
 ---
 
-## 📋 Executive Summary
-
-![Executive Summary](screenshots/executive-summary.png)
-
----
+## 🥇 Top 10 Best Performing Products
+![Top Products](images/top-products-table.png)
 
 # ✨ Features
 
