@@ -1,239 +1,78 @@
-# 🍬 Nassau Candy Product Line Profitability Dashboard
+# Nassau Candy — Product-Line Profitability Dashboard
 
-An interactive **Business Intelligence Dashboard** built using **Streamlit, Pandas, NumPy, and Plotly** to analyze product sales, profitability, gross margins, regional performance, and business insights for the Nassau Candy Distributor dataset.
+An interactive analytics dashboard by **Pathlavath Shiva Kumar** for exploring product sales, gross profit, margins and regional performance in the Nassau Candy Distributor dataset.
 
----
+## Problem and approach
 
-## 📌 Project Overview
+Revenue alone does not show which products contribute profit. This project prepares order-level CSV data and combines filters, visual comparisons and detail tables in a Streamlit application.
 
-This dashboard helps business stakeholders identify:
+## Features
 
-- 💰 Top revenue-generating products
-- 📈 Monthly sales and profit trends
-- 🌍 Best-performing regions
-- 🏢 Division-wise profitability
-- 🎯 Products contributing to 80% of total revenue (Pareto Analysis)
-- ⚠️ Low-margin and high-risk products
-- 📊 Executive business insights and recommendations
+- Division, region and product filters.
+- Sales, gross-profit, margin and unit summaries.
+- Product and regional comparisons, plus monthly sales/profit trends.
+- Sales-versus-profit plots, cumulative revenue contribution and Pareto analysis.
+- Margin-risk exploration, top-product tables and a dataset preview.
 
-The application provides an interactive interface with dynamic filters, KPI cards, and visual analytics for business decision-making.
+**Stack:** Python, Pandas, Streamlit and Plotly. The dashboard's implemented analysis is descriptive; forecasting and prediction are future work.
 
----
+## Architecture
 
-# 🚀 Dashboard Preview
-
-## 🏠 Dashboard Home
-![Dashboard Home](images/Dashboard-Home.png)
-
----
-
-## 📊 Revenue Analysis
-![Revenue Analysis](images/revenue-analysis.png)
-
----
-
-## 📈 Sales vs Profit Analysis
-![Sales vs Profit](images/sales-profit-analysis.png)
-
----
-
-## 📉 Pareto Analysis (80/20 Rule)
-![Pareto Analysis](images/pareto-analysis.png)
-
----
-
-## 🏆 Products Contributing to 80% Revenue
-![Revenue Contribution](images/Revenue-contribution.png)
-
----
-
-## ⚠️ Margin Risk Analysis
-![Margin Risk](images/margin-risk-analysis.png)
-
----
-
-## 💡 Business Insights & Recommendations
-![Business Insights](images/business-insights.png)
-
----
-
-## 📌 Executive Summary
-![Executive Summary](images/executive-summary.png)
-
----
-
-## 🥇 Top 10 Best Performing Products
-![Top Products](images/top-products-table.png)
-
-# ✨ Features
-
-### 📌 Interactive Filters
-
-- Division Filter
-- Region Filter
-- Product Filter
-
----
-
-### 📊 KPI Dashboard
-
-- Total Sales
-- Total Profit
-- Average Gross Margin
-- Total Units Sold
-- Number of Products
-- Number of Regions
-- Number of Divisions
-
----
-
-### 📈 Business Visualizations
-
-- Revenue by Product
-- Division Profit Analysis
-- Revenue by Region
-- Monthly Revenue Trend
-- Monthly Profit Trend
-- Sales vs Profit Bubble Chart
-- Pareto (80/20) Analysis
-- Margin Risk Analysis
-
----
-
-### 📋 Data Tables
-
-- Top 10 Best Performing Products
-- Products Contributing to 80% Revenue
-- Dataset Explorer
-
----
-
-### 💡 Business Intelligence
-
-- Key Findings
-- Business Recommendations
-- Executive Summary
-
----
-
-# 🛠️ Tech Stack
-
-| Technology | Purpose |
-|------------|---------|
-| Python | Programming Language |
-| Streamlit | Dashboard Framework |
-| Pandas | Data Cleaning & Analysis |
-| NumPy | Numerical Operations |
-| Plotly | Interactive Visualizations |
-
----
-
-# 📂 Project Structure
-
-```
-Nassau-Candy-Analysis/
-│
-├── app.py
-├── requirements.txt
-├── README.md
-├── LICENSE
-├── .gitignore
-│
-├── data/
-│   └── Nassau Candy Distributor.csv
-│
-└── screenshots/
-    ├── dashboard-home.png
-    ├── revenue-analysis.png
-    ├── sales-profit-analysis.png
-    ├── pareto-analysis.png
-    ├── revenue-contribution.png
-    ├── margin-risk-analysis.png
-    ├── top-products-table.png
-    ├── business-insights.png
-    └── executive-summary.png
+```mermaid
+flowchart LR
+  A[Distributor CSV] --> B[Pandas date and numeric preparation]
+  B --> C[Cached dataset]
+  C --> D[Division, region and product filters]
+  D --> E[Aggregations and margin analysis]
+  E --> F[Streamlit metrics and Plotly charts]
 ```
 
----
+## Structure
 
-# 📥 Installation
+```text
+app.py                           Dashboard and data preparation
+analysis.ipynb                   Exploratory notebook
+data/Nassau Candy Distributor.csv Input dataset
+images/                          Existing dashboard screenshots
+requirements.txt                 Python dependencies
+LICENSE                          Repository license
+```
 
-Clone the repository
+## Run locally
 
 ```bash
-git clone https://github.com/your-username/Nassau-Candy-Analysis.git
-```
-
-Move into the project
-
-```bash
-cd Nassau-Candy-Analysis
-```
-
-Install dependencies
-
-```bash
+git clone https://github.com/shivakumar9121/Nassau-Candy-Product-Line-Profitability-Dashboard.git
+cd Nassau-Candy-Product-Line-Profitability-Dashboard
+python -m venv .venv
+# Windows: .venv\Scripts\activate
+# macOS/Linux: source .venv/bin/activate
 pip install -r requirements.txt
-```
-
-Run the dashboard
-
-```bash
 streamlit run app.py
 ```
 
-The application will start at
+Run from the repository root so the CSV path resolves. Open the local URL printed by Streamlit.
 
-```
-http://localhost:8501
-```
+## Dashboard previews
 
----
+![Dashboard home](images/Dashboard-Home.png)
+![Revenue analysis](images/revenue-analysis.png)
+![Sales and profit comparison](images/sales-profit-analysis.png)
+![Pareto analysis](images/pareto-analysis.png)
+![Revenue contribution](images/Revenue-contribution.png)
+![Margin risk](images/margin-risk-analysis.png)
+![Product detail](images/top-products-table.png)
+![Business insights](images/business-insights.png)
+![Executive summary](images/executive-summary.png)
 
-# 📊 Dataset
+## Outputs and limits
 
-The project uses the **Nassau Candy Distributor Dataset** containing:
+The result is an interactive dataset-exploration tool. Findings vary with the data and selected filters. Dashboard recommendations should be checked against business context; no verified cost saving, revenue increase or client adoption is claimed.
 
-- Order Date
-- Ship Date
-- Product Name
-- Division
-- Region
-- Sales
-- Gross Profit
-- Units
+Potential improvements include automated aggregation checks, clearer separation of data preparation from presentation, and validation of every narrative summary against the active filters.
 
----
+## Author
 
-# 📌 Key Insights
+Pathlavath Shiva Kumar · B.Tech CSE, IIIT Vadodara · Class of 2027
 
-- Chocolate Division generates the highest revenue.
-- Pacific Region is the best-performing region.
-- Top 4 products contribute nearly 80% of total revenue.
-- Overall Gross Margin is approximately 66%.
-- Premium chocolate products are the primary revenue drivers.
+[GitHub](https://github.com/shivakumar9121) · [LinkedIn](https://www.linkedin.com/in/pathlavath-shiva-kumar-441517321/)
 
----
-
-# 🔮 Future Improvements
-
-- Customer Segmentation
-- Sales Forecasting
-- Inventory Optimization
-- Profit Prediction using Machine Learning
-- Streamlit Cloud Deployment
-- Advanced Business KPIs
-
-
----
-
-# 👨‍💻 Author
-
-**Pathlavath Shiva Kumar**
-
-B.Tech CSE Student  
-Indian Institute of Information Technology Vadara (IIIT Vadodara)
-
----
-
-## ⭐ If you found this project useful, please consider giving it a Star!
